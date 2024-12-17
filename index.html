@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="media/favicon.svg" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="script.js"></script>
+    <title>Feliz Aniversário</title>
+</head>
+<body>
+    <div id="box">
+        <p id="message"></p>
+        <img src="media/aniver.gif" alt="">
+        <button id="surprise">Clique :D</button>
+    </div>
+    <button id="help">?</button>
+    <div id="helpBox">
+        <div id="close">X</div>
+        <h2>Como usar?</h2>
+        <p>Edite a url com os seguintes parâmetros (tudo junto):</p>
+        <ul>
+            <li>? - Para indicar o começo dos parâmetros</li>
+            <li>&amp; - Para separar os parâmetros</li>
+            <li>de=[seu nome]</li>
+            <li>para=[nome do aniversariante]</li>
+            <li>idade=[idade do aniversariante]</li>
+        </ul>
+        <p>Assim deve ficar parecido com isso:</p>
+        <p><em><strong>https://jol-tm.github.io/feliz-aniversario/?de=Pedro&amp;para=Gabriel&amp;idade=20</strong></em></p>
+        <p>Agora copie o link com os seus parâmetros personalizados e mande para o aniversariante acessá-lo!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Patrick Hand";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(media/bckg.jpg);
+    background-size: contain;
+    height: 100vh;
+    margin: 0 1rem;
+    animation: bckg 20s linear infinite;
+}
+
+#box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    max-width: 90vw;
+    max-height: 70vh;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    border: 5px solid yellow;
+    border-radius: 1rem;
+    overflow: hidden;
+    backdrop-filter: blur(1px);
+    animation: colorful 10s linear infinite, fade 1s;
+    transition: 1s;
+    img {
+        width: 5rem;
+    }
+}
+
+#message {
+    text-align: center;
+    transition: .5s;
+}
+
+#surprise, #eat {
+    font-family: "Patrick Hand";
+    font-size: 1.25rem;
+    min-height: 3.125rem;
+    padding: .5rem;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid cyan;
+    border-radius: .5rem;
+    transition: .3s;
+}
+
+#help {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-family: "Patrick Hand";
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid black;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    transition: .3s;
+    animation: shake 2s infinite alternate ease-in-out;
+}
+
+#helpBox {
+    opacity: 0;
+    scale: 0;
+    font-size: 1.3rem;
+    position: fixed;
+    max-width: 90vw;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid;
+    border-radius: 1rem;
+    z-index: 1;
+    transition: .3s;
+}
+
+#close {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    transition: .3s;
+}
+
+#surprise:hover, #eat:hover, #help:hover, #close:hover  {
+    cursor: pointer;
+    transform: translateX(3px);
+}
+
+@keyframes bckg {
+    from {
+        background-position: 0 0;
+    } to {
+        background-position: 0 100vh;
+    }
+}
+@keyframes colorful {
+    from {
+        backdrop-filter: hue-rotate(0deg) blur(1px);
+    } to {
+        backdrop-filter: hue-rotate(360deg) blur(1px);
+    }
+}
+@keyframes shake {
+    from {
+        rotate: -10deg;
+    } to {
+        rotate: 10deg;
+    }
+}
+@keyframes fade {
+    from {
+        transform: translateY(5rem);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
